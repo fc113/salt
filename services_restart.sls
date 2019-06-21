@@ -1,4 +1,4 @@
-#herstart de service Apache en munin-node
+#Restart diverse services op de server
 restart apache2:
  cmd:
  - run
@@ -8,3 +8,15 @@ restart munin-node:
  cmd:
  - run
  - name: systemctl restart munin-node
+
+restart rsyslog:
+ cmd:
+ - run
+ - name: systemctl restart rsyslog
+
+restart docker:
+ cmd:
+ - run
+ - name: systemctl start docker
+ - name: systemctl enable docker
+

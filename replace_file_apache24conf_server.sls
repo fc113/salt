@@ -2,6 +2,3 @@
 /etc/munin/apache24.conf:
   file.managed:
     - source: salt://apache24.conf
-#    - user: chiel
-#    - group: root
-#    - mode: 777

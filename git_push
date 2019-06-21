@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Dit is een script om files naar git te pushen."
+echo "Welke file moet worden gepusht naar git? Gebruik ster ( * ) bij meerdere files."
+read filename #invoer welke files gepusht moeten worden.
+
+filen=$filename
+echo "Na deze melding verschijnt er een venster waar je een comment kan invullen, het is verplicht om hier iets in te vullen. Druk op enter om door te gaan." 
+read  leeg
+
+sudo git commit "$filen"
+sudo git push origin master
+
+
